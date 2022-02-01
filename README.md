@@ -1,1 +1,1 @@
-# hs-math-notes
+# hs-physics-notes
