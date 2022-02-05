@@ -195,12 +195,81 @@
                 \sigma^2 = \frac{1}n \sum_{i=1}^n (x_i - \overline{x})^2 \equiv \frac{1}n \sum_{i=1}^n f_i (x_i - \overline{x})^2
             \]
 
+            <h4>Probability</h4>
 
+            The degree of certainty of an event ocurring is its <strong>probability</strong>.
 
+            <h5>Definitions of Concepts regarding Probability</h5>
 
+            An <strong>experiment</strong> is an act that can be repeated under controlled conditions. <br><br>
 
+            A <strong>trial</strong> is an individual instance of carrying out an experiment. <br><br>
 
-            
+            A <strong>random experiment</strong> is an experiment whose all possible outcomes are known, but the exact outcome of a trial is unknown. <br><br>
+
+            The <strong>sample space</strong> is the collection of all possibile outcomes of a random experiment. <br><br>
+
+            Each of the elements of a <em>sample space</em> is called a <strong>sample point</strong>. <br><br>
+
+            An <strong>event</strong> is a particular set of possible outcomes that can result from an experiment. <br><br>
+
+            The <strong>complementary</strong> event of another event is the set of all possible outcomes where the original event does not occur. <br><br>
+
+            Two events with the same/equal probability of occurring are called <strong>equally likely events</strong>. <br><br>
+
+            Two events are <strong>mutually exclusive</strong> if they have no common outcomes. <br><br>
+
+            Two events are <strong>not mutually exclusive</strong> if they necessarily have common outcomes. <br><br>
+
+            <strong>Sure/certain</strong> events are events whose probability of occurring is 1. <br><br>
+
+            <strong>Unsure/uncertain</strong> events are events whose probability of ocurring ranges between 0 and 1. <br><br>
+
+            <strong>Impossible events</strong> are events whose probability of occurring is 0. <br><br>
+
+            An event is <strong>dependent </strong>on another event if the probability of it occurring (or lack thereof) is affected by the occurring (or lack thereof) of the other event. <br><br>
+
+            If the probability of an event occurring (or lack thereof) is not affected by the occurring (or lack thereof) of another event, then the two events are <strong>mutually independent</strong>. <br><br>
+
+            When the probability of an event occurring depends on the ocurring of another event, then the probability is called <strong>conditional probability</strong>. <br><br>
+
+            <h5>Mathematical Laws regarding Probability</h5>
+
+            The following hold true for mutually independent events \(A\) and \(B\)
+            <ul>
+                <li>\(P(A \cup B) = P(A) + P(B)\)</li>
+                <li>\(P(A \cap B) = P(A) \cdot P(B)\)</li>
+            </ul>
+
+            In general 
+            \begin{align}
+                    P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+                    P(A \cup B \cup C) &= P(A) + P(B) + P(C) - P(A \cap B) - P(B \cap C) - P(A \cap C) + P(A \cap B \cap C)
+            \end{align}
+
+            For mutually exclusive events
+            \[
+                    A \cap B = \phi \iff P(A \cap B) = 0
+            \]
+
+            \(A\) being conditoinally probable depending on \(B\) (pronounced <em>\(A\) given \(B\)</em>)
+            \[
+                P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+            \]
+
+            In general
+            \[
+                P(A \cap B) = P(A) \cdot P(B \mid A)
+            \]
+
+            Some more laws regarding probabilities
+            <ul>
+                <li>\(0 \leq P(A) \leq 1\)</li>
+                <li>\(P(A) + P(\overline{A}) = 1\), where \(P(\overline{A})\) is the complementary probability of \(P(A)\)</li>
+                <li>\(P(A \cap B) = P(A) \cdot P(B) \gt 0 \iff P(A) \gt 0 \land P(B) \gt 0 \implies A \cap B \neq \phi\). In other words, two events \(A\) and \(B\) cannot be mutually independent and mutually exclusive at the same time.</li>
+                <li>The sum of the probabilities of all complementary events equals 1. \(\sum_{i=1}^n P(A_i) = 1\)</li>
+                <li>\(P(A \cap B) = P(A) \cdot P(B) \iff P(A \cap \overline{B}) = P(A) \cdot P(\overline{B})\)</li>
+            </ul>
 
 
 
