@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HS Math Notes</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- latex.css -->
+    <link rel="stylesheet" href="https://latex.now.sh/style.css">
+    <!-- mathjax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <img src="./home.png" alt="Home">
+      <a href="https://github.com/leadersheir/hs-math-notes"><img src="./github_icon.png" alt="github"></a>
+    </div>
+
+    
+    <div id="main">
+        <h1 class="title">High School Math Notes</h1>
+
+        <div id="toc">
+            <h3>TOC</h3>
+            <a href="#ch11"><h5>Chapter 1</h5></a>
+            <a href="#ch12"><h5>Chapter 2</h5></a>
+            <a href="#ch13"><h5>Chapter 3</h5></a>
+            <a href="#ch14"><h5>Chapter 4</h5></a>
+            <a href="#ch15"><h5>Chapter 5</h5></a>
+            <a href="#ch16"><h5>Chapter 6</h5></a>
+            <a href="#ch17"><h5>Chapter 7</h5></a>
+            <a href="#ch18"><h5>Chapter 8</h5></a>
+            <a href="#ch19"><h5>Chapter 9</h5></a>
+            <a href="#ch20"><h5>Chapter 10</h5></a>
+            <a href="./index.html"><h5>VOL I</h5></a>
+        </div>
+
+        <div id="ch20">
+            <h2>Chapter 20 Measures of Dispersion and Probability</h2>
+
+            The tendency of data to cluster around a central value is called <em>central tendency</em>. The counterpart to this, the tendency of data to spread out around a central value is called <em>dispersion</em>. <br><br>
+
+            Measures of dispersion are necessary to compare between two balanced distributions and control the values of changing variables. <br><br>
+
+            <strong>Absolute measures of dispersion</strong> are when the dispersion is expressed in the same units as the original data.
+            <ul>
+                <li>Range</li>
+                <li>Mean Deviation</li>
+                <li>Standard Deviation</li>
+                <li>Quartile Deviation</li>
+            </ul>
+
+            <strong>Relative measures of dispersion</strong> are when the dispersion is expressed in terms of the ratios of the <em>absolute measures</em> of dispersion and the sum of the central value or the values related to the <em>absolute measures</em> of dispersion.
+            <ul>
+                <li>Coefficient of Range</li>
+                <li>Coefficient of Mean Deviation</li>
+                <li>Coefficient of Variation</li>
+                <li>Coefficient of Quartile Deviation</li>
+            </ul>
+
+            <h4>Preliminaries</h4>
+            The <strong>mean</strong> of an ungrouped data set is given by
+            \[
+                \overline{X} = \frac{1}{n} \sum_{i=1}^{n} x_i
+            \]
+            and for a grouped data set
+            \[
+                \overline{X} = \frac{1}{n} f_i x_i
+            \]
+            where \(x_i\) is the mid-value of the \(i\)-th class. <br><br>
+
+            The <strong>median</strong> of an ungrouped data set is given by
+
+            \[
+                M_e = \begin{cases}
+                        \frac{\left(\frac{n}{2}\right)^{th} + \left(\frac{n}{2} + 1\right)^{\text{th}}}{2}\quad \text{, if $n$ is even}\\~\\
+                        \left(\frac{n+1}{2}\right)^{\text{th}}\quad \text{, if $n$ is odd}\\
+                    \end{cases}
+            \]
+
+            and for grouped data
+
+            \[
+                M_e = l + \frac{h}f \left(\frac{n}2 - C_{\lt}\right)
+            \]
+            where \(l\) is the lower limit of the median class, \(f\) is the frequency, \(h\) is the class interval, \(n\) is the sample size, and \(C_{\lt}\) is the cumulative frequency of the previous class of the median class.
+
+            <h4>Absolute Measures of Dispersion</h4>
+
+            <strong>Range</strong> is the difference between the lowest and the largest data value
+            \[
+                R = \mid x_n - x_1 \mid
+            \]
+            where \(x_n\) is the largest data value and \(x_1\) is the lowest. <br><br>
+
+            For grouped data
+            \[
+                R = \mid L_n - L_1 \mid
+            \]
+            where \(L_n\) is the upper limit of the last class and \(L_1\) is the lower limit of the first class. <br><br>
+
+            <strong>Mean deviation</strong> is the sum of the absolute values of dispersion from the central value divided by the sample size
+            \[
+                MD_{\overline{x}} = \frac{1}n \sum_{i=1}^n \mid x_i - \overline{x} \mid
+            \]
+            For grouped data
+            \[
+                MD_{\overline{x}} = \frac{1}n \sum_{i=1}^n f_i \mid x_i - \overline{x} \mid
+            \]
+            where \(x_i\) is the mid-value of the \(i\)-th class. <br><br>
+
+            Similarly the mean deviation calculated with the median and the mode are given by
+
+            \begin{align}
+                MD_{me} &= \frac{1}n \sum_{i=1}^n \mid{x_i - M_e} \mid \quad & MD_{me} = \frac{1}n \sum_{i=1}^n f_i \mid{x_i - M_e} \mid \\
+                MD_{mo} &= \frac{1}n \sum_{i=1}^n \mid{x_i - M_o} \mid \quad & MD_mo = \frac{1}n \sum_{i=1}^n f_i \mid{x_i - M_o} \mid
+            \end{align}
+
+            <strong>Standard deviation</strong> is the positive square root of the sum of the squares of the deviations of the data values from the arithmetic mean of the data set
+            \[
+                \sigma = \sqrt{ \frac{1}n \sum_{i=1}^n (x_i - \overline{x})^2 }
+            \]
+            and for a grouped data set
+            \[
+                \sigma = \sqrt{ \frac{1}n \sum_{i=1}^n f_i (x_i - \overline{x})^2 }
+            \]
+
+            A more computationally efficient form of the formulae are
+            \begin{align}
+                \sigma &= \sqrt{ \frac{1}n \sum_{i=1}^n x_i^2 - \overline{x}^2 } \\
+                       &= \sqrt{ \frac{1}n \sum_{i=1}^n x_i^2 - \left(\frac{1}n \sum_{i=1}^n x_i \right)^2 } \\
+            \end{align}
+
+            similarly for grouped data
+            \begin{align}
+                \sigma &= \sqrt{ \frac{1}n \sum_{i=1}^n f_i x_i^2 - \overline{x}^2 } \\
+                       &= \sqrt{ \frac{1}n \sum_{i=1}^n x_i^2 - \left(\frac{1}n \sum_{i=1}^n f_i x_i \right)^2 } \\
+            \end{align}
+            where \(x_i\) is the mid-value of the \(i\)-th class. <br><br>
+
+            The \(i\)-th quartile for ungrouped data is given by
+            \[
+                Q_i =   \begin{cases}
+                            \frac{ \left(\frac{in}4\right)^{\text{th}} \text{ term } + \left(\frac{in}4 + 1\right)^{\text{th}} \text{ term} }2 , \text{ when \(n\) is odd} \\~\\
+                            \left(\frac{(n+1)i}4\right)^{\text{th}} \text{ term} , \text{ when \(n\) is even}
+                        \end{cases}
+            \]
+
+            for grouped data
+            \[
+                Q_i = l + \frac{\frac{ni}4 - C_{\lt}}f \times h
+            \]
+            where \(l\) is the lower limit of the quartile class, \(n\) is the sample size, \(C_{\lt}\) is the cumulative frequency of the class previous to the quartile class, \(f\) is the frequency of the quartile class, and \(h\) is the class-interval. <br><br>
+
+            Then the <strong>quartile deviation</strong> is given by
+            \[
+                QD = \frac{(Q_3 - Q_2) - (Q_2 - Q_1)}2 = \frac{Q_3 - Q_1}2
+            \]
+
+            <h4>Relative Measures of Dispersion</h4>
+
+            The <strong>coefficient of range</strong> is given by
+            \[
+                CR = \frac{x_n - x_1}{x_n + x_i} \times 100
+            \]
+            and for grouped data
+            \[
+                CR = \frac{L_n - L_1}{L_n + L_i} \times 100
+            \]
+
+            The <strong>coefficient of mean deviation</strong> is given by
+            \begin{align}
+                CMD_{\overline{x}} &= \frac{MD_{\overline{x}}}{\overline{x}} \times 100 \\~\\
+                CMD_{me} &= \frac{MD_{me}}{M_e} \times 100 \\~\\
+                CMD_{mo} &= \frac{MD_{mo}}{M_o} \times 100
+            \end{align}
+
+            The <strong>coefficient of variation</strong> is given by
+            \[
+                CV = \frac{\sigma}{\overline{x}} \times 100
+            \]
+
+            And the <strong>coefficient of quartile deviation</strong> is given by
+            \[
+                CQD = \frac{Q_3 - Q_1}{Q_3 + Q_1} \times 100
+            \]
+
+            <strong>Variance</strong> is simply the square of the <em>standard deviation</em>
+            \[
+                \sigma^2 = \frac{1}n \sum_{i=1}^n (x_i - \overline{x})^2 \equiv \frac{1}n \sum_{i=1}^n f_i (x_i - \overline{x})^2
+            \]
+
+
+
+
+
+
+            
+
+
+
+      </div>      
+
+    </div>
+
+	<script src="index.js"></script>
+  </body>
+</html>
